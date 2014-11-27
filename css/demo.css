@@ -1,0 +1,143 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,500);
+
+
+
+*, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+.clearfix:before, .clearfix:after { content: ''; display: table; }
+.clearfix:after { clear: both; }
+
+html, body, .container {
+	height: 100%;
+}
+
+body {
+	background: #2dcb89;
+	color: #fff;	
+	font-size: 1em;
+	font-family: 'Roboto', Arial, sans-serif;
+	font-weight: 100;
+	overflow: hidden;
+	overflow-y: scroll;
+	min-height: 590px;
+}
+
+a {
+	color: rgba(0,0,0,0.3);
+	text-decoration: none;
+	outline: none;
+}
+
+a:hover, a:focus {
+	color: #fff;
+}
+
+
+/* results demos */
+.results-wrap {
+	font-weight: 700;
+	text-align: center;
+	padding: 1em 0 5em;
+	background: #fff;
+	color: #666;	
+
+	position: absolute;
+	top: 100px;
+	width: 90%;
+	left: 5%;
+
+	z-index: 99;
+	display: none;
+
+}
+
+.overview .results-wrap {
+	display: block;
+	/* Material design like shadow */
+	box-shadow: 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+}
+
+.results-wrap h1 {
+	font-weight: 100;
+	color: #000;
+	margin: 0;
+	padding-bottom: 20px;
+	border-bottom: 1px dotted #CCC;
+}
+
+.results-wrap .results {
+	width: 90%;
+	margin: 10px 5%;
+}
+
+.results .result {
+	float:left;
+	/*border: 1px solid #000;*/
+	min-width: 50%;
+}
+
+.results .result:last-child {
+	border-left: 1px solid #000;
+}
+
+.results .result h2 {
+	font-weight: 400;
+	color: #333;
+	border-bottom: 1px solid #000;
+	padding-bottom: 10px;
+}
+
+.results .result ul {
+	clear: both;
+	margin: 0;
+	padding: 0 10px;
+}
+
+
+.results .result ul li {
+	border-bottom: 1px solid #eee;
+	list-style-type: none;
+	clear: both;
+	height: 30px;
+	margin-bottom: 10px;
+}
+
+.results .result ul li div {
+	float:left;
+	/*outline: 1px solid blue;*/
+	min-width: 50%;
+	text-align: left;
+	text-indent: 1%;
+	font-weight: normal;
+}
+
+.results .result ul li div:last-child {
+	text-align: center;
+	text-indent: 0px;
+}
+
+
+.results table td, .results table th {
+	padding: 9px 10px;
+	text-align: left;
+	border: 1px solid #000;
+	font-size: 2em;
+	color: #000;
+	font-weight: 100;
+	background: #eee;
+}
+
+@media only screen and (max-width: 767px) {
+	.results .result {
+		float:none;
+		clear:both;	
+		min-width: 90%;
+		margin: 5%;
+	}
+	.results .result ul {
+		clear: both;
+		margin: 0;
+		padding: 0px;
+	}
+
+
+}

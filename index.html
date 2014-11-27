@@ -6,35 +6,202 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
+        <title>TNS ou assimilé salarié - Quel statut choisir ?</title>
+        <meta name="description" content="Quel statut choisir entre Travailleur non salarié et assimilé salarié ? La réponse en moins de 30 secondes. ">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- favicons and shortcut icons for all devices including HDPI -->
+        <link rel="shortcut icon" href="./img/icons/favicon.ico">
+        <link rel="apple-touch-icon" sizes="57x57" href="./img/icons/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="./img/icons/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="./img/icons/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="./img/icons/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="./img/icons/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="./img/icons/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="./img/icons/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="./img/icons/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="./img/icons/apple-touch-icon-180x180.png">
+        <meta name="apple-mobile-web-app-title" content="Quel statut ?">
+        <link rel="icon" type="image/png" href="./img/icons/favicon-192x192.png" sizes="192x192">
+        <link rel="icon" type="image/png" href="./img/icons/favicon-160x160.png" sizes="160x160">
+        <link rel="icon" type="image/png" href="./img/icons/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="./img/icons/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="./img/icons/favicon-32x32.png" sizes="32x32">
+        <meta name="msapplication-TileColor" content="#2dcb89">
+        <meta name="msapplication-TileImage" content="./img/icons/mstile-144x144.png">
+        <meta name="msapplication-config" content="./img/icons/browserconfig.xml">
+        <meta name="application-name" content="Quel statut ?">
+
+
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/component.css" />
+        <link rel="stylesheet" type="text/css" href="css/cs-select.css" />
+        <link rel="stylesheet" type="text/css" href="css/cs-skin-boxes.css" />
+        <script src="js/modernizr.custom.js"></script>
+        <!--<script src="js/vendor/modernizr-2.6.2.min.js"></script>-->
     </head>
     <body>
 
         <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <p class="browsehappy">Votre navigateur est <strong>obsolète</strong>. Pensez à <a href="http://browsehappy.com/">le mettre à jour</a> pour une expérience optimale.</p>
         <![endif]-->
 
-        <!-- 
-            App code should be here 
-            Ready ? code !
-        -->
+        <div class="container">            
+            <section class="fs-form-wrap" id="fs-form-wrap">
+                <div class="fs-title">
+                    <h1>Quel statut choisir ?</h1>
+                </div>
+                <form id="myform" class="fs-form fs-form-full" autocomplete="off">
+                    <ol class="fs-fields">
+                        <li>
+                            <label class="fs-field-label fs-anim-upper" for="q1" data-info="Les charges de votre entreprise chaque mois">Charges mensuelles</label>
+                            <input class="fs-anim-lower" id="q1" name="q1" type="number" placeholder="Charges en euros" required/>
+                        </li>
+                        <li>
+                            <label class="fs-field-label fs-anim-upper" for="q2" data-info="Vos charges annuelles lissées sur 12 mois : par exemple CFE, expert comptable...">Provision de charge</label>
+                            <input class="fs-anim-lower" id="q2" name="q2" type="number" placeholder="Charges lissées en euro" required/>
+                        </li>
+                        <li data-input-trigger>
+                            <label class="fs-field-label fs-anim-upper" for="q3" data-info="Le salaire brut que vous désirez percevoir">Rémunération</label>
+                            <input class="fs-anim-lower" id="q3" name="q3" type="number" placeholder="Salaire brut" required/>
+                        </li>
+                        <li data-input-trigger>
+                            <label class="fs-field-label fs-anim-upper" data-info="Votre chiffre d'affaire prévisionnel sur l'année">Chiffre d'affaire</label>
+                            <input class="fs-anim-lower" id="q4" name="q4" type="number" placeholder="Chiffre d'affaire en euro" required/>
+                        </li>
+                    </ol>
+                </form>
+            </section>
+            
+            <section class="results-wrap">
+                <h1>Résultats</h1>
+                <div class="results">
+                    <div id="tns" class="result">
+                        <h2>Travailleur Non Salarié</h2>
+                        <ul class="costs">
+                            <li>
+                                <div>Provision de charge</div>
+                                <div class="r1"></div>
+                            </li>
+                            <li>
+                                <div>Rémunération</div>
+                                <div class="r2"></div>
+                            </li>
+                            <li>
+                                <div>Charges sociales</div>
+                                <div class="r3"></div>
+                            </li>
+                            <li>
+                                <div>Total</div>
+                                <div class="r4"></div>
+                            </li>
+                        </ul>
+                        <ul class="ca">
+                            <li>
+                                <div>CA</div>
+                                <div class="r5"></div>
+                            </li>
+                            <li>
+                                <div>Reste</div>
+                                <div class="r6"></div>
+                            </li>
+                        </ul>
+                        <ul class="revenue">
+                            <li>
+                                <div>Rémunération totale</div>
+                                <div class="r7"></div>
+                            </li>
+                            <li>
+                                <div>IR</div>
+                                <div class="r8"></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="asa" class="result">
+                        <h2>Travailleur Non Salarié</h2>
+                        <ul class="costs">
+                            <li>
+                                <div>Provision charge</div>
+                                <div class="r1">200</div>
+                            </li>
+                            <li>
+                                <div>Rémunération</div>
+                                <div class="r2"></div>
+                            </li>
+                            <li>
+                                <div>Charges sociales</div>
+                                <div class="r3"></div>
+                            </li>
+                            <li>
+                                <div>Total</div>
+                                <div class="r4"></div>
+                            </li>
+                        </ul>
+                        <ul class="ca">
+                            <li>
+                                <div>CA</div>
+                                <div class="r5"></div>
+                            </li>
+                            <li>
+                                <div>Reste</div>
+                                <div class="r6"></div>
+                            </li>
+                        </ul>
+                        <ul class="revenue">
+                            <li>
+                                <div>Remunération totale</div>
+                                <div class="r7"></div>
+                            </li>
+                            <li>
+                                <div>IR</div>
+                                <div class="r8"></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <br style="clear:both">
+                </div>
+            </section>
+        </div>
+
+
+        <script src="js/classie.js"></script>
+        <script src="js/selectFx.js"></script>
+        <script src="js/fullscreenForm.js"></script>
+        <script>
+            (function() {
+                var formWrap = document.getElementById( 'fs-form-wrap' );
+
+                [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {    
+                    new SelectFx( el, {
+                        stickyPlaceholder: false,
+                        onChange: function(val){
+                            document.querySelector('span.cs-placeholder').style.backgroundColor = val;
+                        }
+                    });
+                } );
+
+                new FForm( formWrap, {
+                    onReview : function() {
+                        classie.add( document.body, 'overview' ); // for demo purposes only
+                    }
+                } );
+            })();
+        </script>
 
         <!-- Google Analytics: Thank you for comming by. -->
         <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-20496942-7', 'auto');
+            ga('send', 'pageview');
         </script>
     </body>
 </html>
