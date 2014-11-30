@@ -127,9 +127,10 @@ a:hover, a:focus {
 }
 
 .information {
-	color: #888; 
+	margin: 40px 50px 0px;
+	color: #333;
+	font-size: 14px;
 	font-weight: 100;
-	font-size: 12px;
 }
 
 @media only screen and (max-width: 767px) {

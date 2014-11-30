@@ -14,7 +14,7 @@ Libéré des contraintes de ce framework, notre HTML est simple, lisible et expl
 Un effort important a également été réalisé pour que le rendu du site soit optimal sur une vaste majorité des terminaux actuels : media queries, gestion des icones/favicons pour iOS et Android, des tiles sur Windows Phone, gestion des images pour les appareils à haute densité de pixels (hdpi).
 
 #####Librairies et inspiration
-Un certain nombre d'éléments ont été intégré a l'application (Javascript, CSS, icônes). Ils ont été modifiés et améliorés ou adaptés pour construire le projet, et il convient d'en créditer les auteurs :
+Un certain nombre d'éléments ont été intégrés a l'application (Javascript, CSS, icônes). Ils ont été modifiés et améliorés ou adaptés pour construire le projet, et il convient d'en créditer les auteurs :
 
   - HTML5 Boilerplate v4.3.0 | MIT License
   - normalize.css v1.1.3 | MIT License
@@ -37,7 +37,7 @@ Or, en HTML5, il est possible de renseigner du texte dans un input de type numbe
 Il n'est donc pas possible de différencier un champ non rempli d'un champ mal rempli...   le message d'erreur doit par conséquent être exprimé pour répondre aux deux cas possibles : champ non saisi ou saisie incorrecte.
 
 
-#####Remerciement
+#####Remerciements
 Pierre, notre interlocuteur chez Hackateam, pour sa disponibilité et les réponses qu'il a pu nous apporter sur le brief du projet.
 
 Fabien Lebret pour ses conseils avisés.
