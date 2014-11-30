@@ -688,7 +688,7 @@ button.fs-continue:hover {
 	text-align: center;
 	background: transparent;
 	color: rgba(0,0,0,0.3);
-	content: 'ou appuyez sur ENTRÉE';
+	/*content: 'ou appuyez sur ENTRÉE';*/
 	font-size: 0.65em;
 	pointer-events: none;
 }

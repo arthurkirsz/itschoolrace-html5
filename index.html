@@ -40,10 +40,7 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" type="text/css" href="css/demo.css" />
         <link rel="stylesheet" type="text/css" href="css/component.css" />
-        <link rel="stylesheet" type="text/css" href="css/cs-select.css" />
-        <link rel="stylesheet" type="text/css" href="css/cs-skin-boxes.css" />
         <script src="js/modernizr.custom.js"></script>
-        <!--<script src="js/vendor/modernizr-2.6.2.min.js"></script>-->
     </head>
     <body>
 
@@ -97,7 +94,7 @@
                                 <div class="r3"></div>
                             </li>
                             <li>
-                                <div>Total</div>
+                                <div>Total des charges</div>
                                 <div class="r4"></div>
                             </li>
                         </ul>
@@ -123,11 +120,11 @@
                         </ul>
                     </div>
                     <div id="asa" class="result">
-                        <h2>Travailleur Non Salarié</h2>
+                        <h2>Assimilé Salarié</h2>
                         <ul class="costs">
                             <li>
                                 <div>Provision charge</div>
-                                <div class="r1">200</div>
+                                <div class="r1"></div>
                             </li>
                             <li>
                                 <div>Rémunération</div>
@@ -138,7 +135,7 @@
                                 <div class="r3"></div>
                             </li>
                             <li>
-                                <div>Total</div>
+                                <div>Total des charges</div>
                                 <div class="r4"></div>
                             </li>
                         </ul>
@@ -165,6 +162,7 @@
                     </div>
                     <br style="clear:both">
                 </div>
+                <p class="information">* l'Impôt sur le revenu est calculé pour être à la tranche à 30%, soit plus de 26631 € de REM, le calcul tient compte des 10% d'abattement automatique</p>
             </section>
         </div>
 
@@ -175,21 +173,11 @@
         <script>
             (function() {
                 var formWrap = document.getElementById( 'fs-form-wrap' );
-
-                [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {    
-                    new SelectFx( el, {
-                        stickyPlaceholder: false,
-                        onChange: function(val){
-                            document.querySelector('span.cs-placeholder').style.backgroundColor = val;
-                        }
-                    });
-                } );
-
                 new FForm( formWrap, {
                     onReview : function() {
-                        classie.add( document.body, 'overview' ); // for demo purposes only
+                        classie.add( document.body, 'overview' );
                     }
-                } );
+                });
             })();
         </script>
 
@@ -203,5 +191,7 @@
             ga('create', 'UA-20496942-7', 'auto');
             ga('send', 'pageview');
         </script>
+
+        <!-- Coded with <3 -->
     </body>
 </html>
